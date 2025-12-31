@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import logoImg from '@/assets/logo.png';
 import classes from './main-header.module.css';
 
@@ -6,7 +7,7 @@ export default function MainHeader() {
     return (
         <header className={classes.header}>
             <Link href="/" className={classes.logo}>    
-                <img src={logoImg.src} alt="Logo, link to home page" />
+                <Image src={logoImg} alt="Logo, link to home page" priority />
             </Link>
 
             <nav className={classes.nav}>
