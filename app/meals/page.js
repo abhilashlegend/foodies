@@ -3,8 +3,8 @@ import classes from "./page.module.css";
 import MealsGrid from "@/components/meals/meals-grid";
 import { getAllMeals } from "@/lib/meals";
 
-export default function Meals() {
-    const meals = getAllMeals();
+export default async function Meals() {
+    const meals = await getAllMeals();
     return (
         <>
             <header className={classes.header}>
