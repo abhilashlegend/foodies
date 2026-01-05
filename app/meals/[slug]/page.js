@@ -4,6 +4,7 @@ import { getMeal } from '../../../lib/meals';
 
 export default function slug({ params }) {
     const meal = getMeal(params.slug);
+    meal.instructions = meal.instructions.replace(/\n/g, '<br/>');
     return (
         <>
             <header className={classes.header}>
@@ -15,7 +16,7 @@ export default function slug({ params }) {
                         {meal.title}
                     </h1>
                     <p className={classes.creator}>
-                        by <a href={`mailto:${meal.creatorEmail}`}>{meal.creatorName}</a>
+                        by <a href={`mailto:${meal.creator_email}`}>{meal.creator}</a>
                     </p>
                     <div className={classes.summary}>{meal.summary}</div>
                 </div>
