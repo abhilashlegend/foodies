@@ -48,6 +48,7 @@ export default function ImagePicker({label, name}) {
                 ref={filePickerRef}
                 className={classes.input}
                 onChange={pickedHandler}
+                required
                 />
                 <button className={classes.button} type='button' onClick={() => filePickerRef.current.click()}>
                     Pick Image
